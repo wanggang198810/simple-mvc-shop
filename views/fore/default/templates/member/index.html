@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{[$GLOBALS.config.site.site_title]} </title>
+    <meta name="keywords" content="{[$GLOBALS.config.site.site_keywords]} " />
+    <meta name="description" content="{[$GLOBALS.config.site.site_description]}" />
+
+    {[include file="jscss.html"]}
+</head>
+
+<body>
+    <!--引入公共头部 S-->
+    {[include file="head.html"]}
+    <!--引入公共头部 E-->
+
+    <!--网站幻灯 + 通知 S-->
+    <div class="wrap mt10">
+
+            <div class="box bgf">
+                <div id="pagenav">
+                    当前位置:&nbsp; <a href="ss">首页</a> &gt; <a href="ss">二手交通工具 &gt;二手自行车低价出售啦</a>
+                </div>
+            </div>
+
+        <div class="fn-clear"></div>
+    </div>
+    <!--网站幻灯 + 通知 E-->
+
+
+    <!-- 物品发布表单 S-->
+    <div class="wrap mt10">
+        <div class="main fn-right bgf">
+            <div class="box">
+                <div class="boxhead">
+                    <h3>【会员中心主页】</h3>
+                </div>
+                <div class="form ">
+                    <div class="info ">
+                        <form method="post" action="?c=a_member&amp;a=edit_save">
+                            <input type="hidden" value="{[$info.id]}" name="id">
+
+                            <dl style="border:0;"><dt>用户名称：</dt><dd>{[$info.username]}  </dd></dl>
+                            <dl><dt>邮箱：</dt><dd>{[$info.email]}</dd></dl>
+                            <dl><dt>手机号：</dt><dd>{[$info.mobile]}</dd></dl>
+                            <dl><dt>qq：</dt><dd>{[$info.qq]}</dd></dl>
+                            <dl><dt>会员分组：</dt><dd><select name="gid">
+                                <option selected="selected" value="2">1级&mdash;普通会员</option>
+                            </select></dd></dl>
+                            <dl>其他详情</dl>
+                            <dl><dt>注册时间：</dt><dd>{[$info.addtime|date_format:"%m-%d %H:%M"]}</dd><dd></dd></dl>
+                            <dl><dt>发布信息次数：</dt><dd>{[$info.tradingcapcity]}</dd><dd>物品信息：6</dd><dd>分类信息：26</dd></dl>
+                            <dl><dt>交易量：</dt><dd>{[$info.tradingcapcity]}</dd><dd>成功：6</dd><dd>失败：6</dd><dd>正在交易：6</dd></dl>
+                            <dl><dt>信用度：</dt><dd>{[$info.credit]}</dd><dd><a href="">计算规则</a></dd></dl>
+                            <dl><dt>积分：</dt><dd>{[$info.email]}</dd><dd></dd></dl>
+                        </form>
+                    </div>
+                    <div class="fn-clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--发布者信息 S-->
+        <div class="sidebar fn-left bgf">
+            {[ include file='member/member_menu.html']}
+        </div>
+        <!--发布者信息 E-->
+        <div class="fn-clear"></div>
+    </div>
+    <!-- 物品发布表单 E-->
+
+
+    <div class="wrap mt10">
+
+        <div class="box bgf">
+
+            1.这是通栏的，放点广告吧,<br>
+            2.提醒王刚在 main上部的标题+简介部分的区块左上角加 封口图标，或者标题第一行的中中上部加带缺口圆形图标，表明：卖完了<br>
+            3.把【我要买和我要卖】做一个随页面滚动的边栏或者不动，这样就全局 发布入口了，如果登录类，也做侧边，随时进入后台和接受消息
+        </div>
+
+        <div class="fn-clear"></div>
+    </div>
+
+
+    <!--引入公共脚部 S-->
+    {[include file="foot.html"]}
+    <!--引入公共脚部 E-->
+</body>
+</html>

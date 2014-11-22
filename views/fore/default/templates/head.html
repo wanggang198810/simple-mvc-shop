@@ -1,0 +1,75 @@
+<!-- 全屏阴影 S-->
+<div id="allscreen" class="none"></div>
+<!-- 全屏阴影 E-->
+
+<div id="head">
+    <div class="wrap">
+        <!--LOGO-->
+        <div class="fn-left" id="logo">
+            <h1><a href="">校园二手信息网站</a></h1>
+        </div>
+        <!--END-->
+        <!--搜索-->
+        <div class="fn-right" id="search">
+            <form method="get" action="">
+        <span class="select">
+        <select name="model">
+            <option value="0">标题</option>
+            <option value="1">标题和描述</option>
+            <option value="2">全文</option>
+        </select>
+        </span>
+                <input type="text" id="keyword" name="keyword">
+                <button type="submit">搜索</button>
+            </form>
+        </div>
+        <!--END-->
+        <div class="fn-clear"></div>
+    </div>
+    <!--导航条-->
+    <div id="nav">
+        <div class="wrap">
+            <ul>
+                <li class="current">
+                    <div class="title"><a href="index.php">网站首页</a></div>
+                </li>
+                <li>
+                    <div class="title"><a href="index.php?c=info&a=lists">出售信息</a></div>
+              <ul class="nav_menu" style="display: none;">
+                        {[section name=sec1 loop=$categoryList]}
+                        <li><a target="_self" href="index.php?c=info&a=lists&id={[$categoryList[sec1].id]}">{[$categoryList[sec1].name]}</a></li>
+                        <li class="line">|</li>
+                        {[/section]}
+                    </ul>
+                </li>
+                <li>
+                    <div class="title"><a href="index.php?c=info&a=lists">求购信息</a></div>
+                    <ul class="nav_menu" style="display: none;">
+                        {[section name=sec1 loop=$categoryList]}
+                        <li><a target="_self" href="index.php?c=info&a=lists&id={[$categoryList[sec1].id]}">{[$categoryList[sec1].name]}</a></li>
+                        <li class="line">|</li>
+                        {[/section]}
+                    </ul>
+                </li>
+                <li>
+                    <div class="title"><a href="index.php?c=article&a=lists">网站新闻</a></div>
+                </li>
+                <li>
+                    <div class="title"><a href="index.php?c=message&a=lists">留言板</a></div>
+                </li>
+
+				<script type="text/javascript">ajax_set_html("reglogin","index.php?c=member&a=ajax_reglogin");</script>
+                <li class="member" >
+					<div class="title" id='reglogin'>
+						
+					</div>
+                </li>
+            </ul>
+            <div class="fn-clear"></div>
+        </div>
+    </div>
+    <div class="fn-clear"></div>
+    <div id="navmenu"> </div>
+</div>
+
+<div class="fn-clear"></div>

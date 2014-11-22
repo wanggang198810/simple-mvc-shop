@@ -1,0 +1,63 @@
+<!-- 全屏阴影 S-->
+<div id="allscreen" class="none"></div>
+<!-- 全屏阴影 E-->
+
+<div id="head">
+    <div class="wrap">
+        <!--LOGO-->
+        <div class="fn-left" id="logo">
+            <h1><a href="">DUXCMS 企业网站管理系统</a></h1>
+        </div>
+        <!--END-->
+        <!--搜索-->
+        <div class="fn-right" id="search">
+            <form method="get" action="">
+        <span class="select">
+        <select name="model">
+            <option value="0">标题</option>
+            <option value="1">标题和描述</option>
+            <option value="2">全文</option>
+        </select>
+        </span>
+                <input type="text" id="keyword" name="keyword">
+                <button type="submit">搜索</button>
+            </form>
+        </div>
+        <!--END-->
+        <div class="fn-clear"></div>
+    </div>
+    <!--导航条-->
+    <div id="nav">
+        <div class="wrap">
+            <ul>
+                <!--判断主导航高亮-->
+                <li class="current">
+                    <div class="title"><a href="index.php">网站首页</a></div>
+                </li>
+                <!--判断循环内导航高亮-->
+
+
+                <li>
+                    <div class="title"><a href="">{[$categoryList[sec1].name]}</a></div>
+                    <ul class="nav_menu" style="display: none;">
+
+                        {[section name=sec2 loop=$categoryList[sec1].sub]}
+                        <li><a href="">{[ if $categoryList[sec1].sub == true ]} {[ $categoryList[sec1].sub[sec2].name ]} {[ /if]}</a></li>
+                        <li class="line">|</li>
+                        {[/section]}
+
+
+
+                    </ul>
+                </li>
+                {[/section]}
+
+            </ul>
+            <div class="fn-clear"></div>
+        </div>
+    </div>
+    <div class="fn-clear"></div>
+    <div id="navmenu"> </div>
+</div>
+
+<div class="fn-clear"></div>

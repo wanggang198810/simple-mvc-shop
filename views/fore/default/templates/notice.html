@@ -1,0 +1,8 @@
+{[assign var="i" value="1"]}
+{[section name=sec1 loop=$articleList]}
+<li>
+    <span class="num">{[ $i]}</span>
+    <span class="title"><a href="index.php?c=article&id={[ $articleList[sec1].id]}" title=" ">{[ $articleList[sec1].title]}</a></span>
+</li>
+{[assign var="i" value=$i+1]}
+{[/section]}

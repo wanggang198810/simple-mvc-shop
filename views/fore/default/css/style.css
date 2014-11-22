@@ -1,0 +1,507 @@
+/*全局属性*/
+body,html {font-size:12px; background-color: #F1F1F1;}
+a {color:#333;}
+a:hover {color:#06C; text-decoration:none}
+ul,li {list-style:none; margin:0; padding:0;}
+/*公共样式*/
+.wrap {width:980px; margin-left:auto; margin-right:auto;}
+.sep10{height:10px; clear:both;}
+.sep5{height:5px; clear:both;}
+
+/*以下两条可能不再用到*/
+.headtitle { line-height:35px; height:35px; border-bottom:1px solid #496688; margin-right:20px;}
+.headtitle h3 { font-weight:bold; font-size:16px;}
+
+
+/*主页面框架*/
+.main {width:735px;}
+.sidebar {width:235px;}
+.mainhead {height: 340px;}
+
+.box {padding:10px;box-shadow:3px 2px 5px #ccc;}
+.box .boxhead {line-height:35px; height:35px;margin-right:20px;margin-left:5px;}
+.box .boxhead h3 { font-weight: bold; font-size:16px;float: left;}
+.box .boxhead .more { float:right}
+.box .boxhead .time { float:right;color:#999999;font-weight: normal;}
+
+
+.box .boxpic {height:90px; padding:10px;border-top: 1px dotted #dddddd;}
+.box .boxpic:hover {background-color: #f7f7f7;}
+.box .boxpic .pic { float:left; width:120px;}
+.box .boxpic .info { float:left; width:550px;}
+.box .boxpic .info .title { font-weight:bold; line-height:25px; height:25px;overflow: hidden}
+.box .boxpic .info .title .time{ font-weight:normal; color:#999;float:right;}
+.box .boxpic .info p { line-height:22px;height:44px;overflow: hidden;}
+.box .boxpic .more { float:right;}
+.box .boxpic ul {}
+.box .boxpic ul li {background: none repeat scroll 0 0 #eeeeee;box-shadow: 1px 1px 1px #EEEEEE;float: left;height: 21px;line-height: 21px;margin-left: 3px;padding: 0 3px;}
+.box .boxpic ul li:hover{background-color: #3688c2;box-shadow: 1px 1px 1px #3688c2;cursor: pointer }
+.box .boxpic ul li a{color: #666;}
+.box .boxpic ul li a:hover{color: #ffffff;}
+
+
+.box .boxlist {padding:0 10px 5px;}
+.box .boxlist ul {}
+.box .boxlist ul li { line-height:35px; height:35px;border-bottom:1px dotted #ddd}
+.box .boxlist ul li .line { color:#CCC; padding-right:5px; float:left;}
+.box .boxlist ul li .num { float:left; margin-right:10px; border:1px solid #ccc; line-height:12px; height:12px; margin-top:10px; padding-left:3px; padding-right:3px;}
+.box .boxlist ul li .title{ float:left;}
+.box .boxlist ul li .time { float:right; color:#999}
+.box .boxcontent { padding:10px; line-height:22px;}
+
+/*边栏定义*/
+.sidebar .box { }
+.sidebar .box .boxhead{height:35px; line-height:35px;}
+
+/*头部*/
+#head {background-color:#F1F1F1; padding-top:20px;}
+#head #logo { background-image:url(../images/logo.gif); background-repeat:no-repeat; width:350px; height:45px;}
+#head #logo h1 {text-indent:-2000px;}
+#head #logo h1 a {display:block; width:350px; height:45px;}
+/*底部*/
+#foot { border-top:1px solid #ddd; margin-top:20px; padding-top:10px; padding-bottom:20px;}
+#foot .menu {margin-left:auto; margin-right:auto; height:30px; text-align:center}
+#foot .menu  {color: #999;}
+#foot .menu a {color: #999; margin-right:10px; margin-left:10px;}
+#foot .menu a:hover {color:#06C;}
+#foot #copyright { line-height:30px; text-align:center; color:#999}
+/*导航*/
+#head #nav {background-color:#3688c2; height:40px; margin-top:20px; position:relative;box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);}
+#head #nav ul {}
+#head #nav ul li {float:left; width:130px;  }
+#head #nav ul li .title a {color:#fff; display:block; width:130px; text-align:center; line-height:40px; text-decoration:none; font-size:16px; color:#fff;}
+#head #nav ul li .title a:hover { background-color:#446688;}
+#head #nav ul .current .title a { background-color:#446699 !important;}
+#head #nav ul li .nav_menu {height:30px; font-size:14px; position:absolute!important; display:none; overflow:hidden}
+#head #nav ul li .nav_menu li {float:left !important;line-height:30px; color:#ccc; width:auto !important}
+#head #nav ul li .nav_menu li a {padding-left:20px; height:29px; padding-right:20px; text-decoration:none; display:block;}
+#head #nav ul li .nav_menu li a:hover {border-bottom:1px solid #475a79; }
+#head #nav ul li .nav_menu .line {}
+#head #nav ul li .menucur {display:block}
+#head #navmenu {height:30px; background-color:#F1F1F1; }
+
+/*会员登录部分*/
+#head #nav ul .member { float: right; border-color: #1E1E21; border-radius: 7px; line-height: 28px; }
+#head #nav ul .member .title a  { color:#fff; display:inline-block; width:55px; text-align:center; line-height:40px; text-decoration:none; font-size:16px; color:#fff;}
+/*搜索*/
+#search {background-color:#3688C2;width:365px;height:30px;padding:2px; margin-top:8px; }
+#search select { vertical-align:top; border:none; width:90px; margin-top:7px;}
+#search .select {width:95px;border:0px; float:left;background-color:#fff; display:block; height:30px; overflow:hidden; padding-left:5px;  margin-right:2px;}
+#search input { width:195px;height:30px; line-height:30px;border:0px; float:left;}
+#search button { width:66px; height:30px; line-height:30px; border:0px;background-color:#3688C2; color:#fff;float:left;}
+
+/*幻灯片*/
+.slideshow { width:715px;height:220px;overflow: hidden; position: relative;}
+.slideshow h3 { color: #EEE; font-size: 12px; font-weight: 700; line-height: 26px; position: absolute; text-indent: 2%; width: 100%; z-index: 102; margin: 0; }
+.slideshow h3 a { color: #FFF; text-decoration: none; }
+.slideshow h3 a:hover { color: #eee; }
+.slideshow li img { border: 0; vertical-align: top;height: 220px; }
+.slideshow ul { list-style-type: none; margin: 0; padding: 0; }
+.slideshow .smallslider-btns { position: absolute; z-index: 103; }
+.slideshow .smallslider-btns .current-btn { background-color: #3e4e68; border: 1px solid #496688; color: #FFF; font-size: 14px; font-weight: 700; }
+.slideshow .smallslider-btns span { background-color: #FFF; border: 1px solid #DCDCDC; color: #496688; cursor: pointer; float: left; font-size: 12px; height: 16px; line-height: 16px; text-align: center; width: 16px; }
+.slideshow .smallslider-lay { background-color: #000; height: 26px; position: absolute; width: 100%; z-index: 101; }
+/*头条*/
+.mainhead .indexhot { margin-left:20px; float:left; width:390px;}
+.mainhead .indexhot .hotbox { border-bottom:1px dotted #ccc; padding-bottom:10px;}
+.mainhead .indexhot .hotbox h2 { font-size: 16px; font-weight: bold; height: 28px;}
+.mainhead .indexhot .hotbox p {line-height: 22px}
+.mainhead .hotlist {}
+.mainhead .hotlist ul {}
+.mainhead .hotlist ul li {float:left; width:50%; line-height:25px; height:25px; color:#CCC}
+.mainhead .hotlist ul li span { padding-right:5px;}
+
+/*图片展示*/
+.piclist { padding:10px;}
+.piclist ul {margin: 0 auto;width: 96%;}
+.piclist ul li { float:left; width:170px;}
+.piclist ul li .pic { width:155px; margin-left:auto; margin-right:auto}
+.piclist ul li .pic img { width:155px; height:110px; border: 1px solid #DDDDDD;padding:1px}
+.piclist ul li .title { width:155px; line-height:22px; margin-left:auto; margin-right:auto; margin-top:5px; height:25px; overflow:hidden;}
+
+/*box之head分类小区块*/
+.box .category {float: right;margin-top: 3px;width: 420px;}
+.box .category li {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-color: #CCCCCC;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 6px;
+    text-align: center;
+    width: 62px;
+}
+.box .category li:hover{background-color: #3688c2;box-shadow: 1px 1px 1px #3688c2;color:#fff;cursor: pointer; }
+.box .category li a:hover{color:#fff;}
+
+/*首页发布入口*/
+#enterence {height: 35px;}
+#enterence > li {background-color: #e5e5e5; float: left;height: 35px;line-height: 35px;text-align: center;width: 49%;}
+#enterence .firstone{margin-right: 1px;}
+#enterence a {font-size: 17px;font-weight: bold;}
+
+
+.prenextbtn{background: none repeat scroll 0 0 #EEEEEE;display: block;height: 112px;line-height: 112px;width: 20px;text-align: center;}
+.prenextbtn img{padding-top: 35px;}
+/*栏目列表*/
+#classbox { padding-top:10px;}
+#classbox .box { float:left; width:345px; margin-right:20px; display:inline; height:410px;}
+
+
+/*面包屑导航*/
+#pagenav {padding-left:15px;background: url("../images/postion_home.gif") no-repeat scroll 0 4px rgba(0, 0, 0, 0);}
+
+/*分页样式*/
+.pages{border-top: 1px dotted #eee;}
+.pages ul{margin: 10px auto 0;width: 300px;height: 30px;}
+.pages ul li{float: left;margin-right: 10px;width: 60px;height: 30px;line-height: 30px;text-align: center;background-color: #eee;}
+.pages a {color: #999999;margin: 0 3px;padding: 3px 0; }
+.pages a:hover { color: #3e4e68 !important;}
+
+/*不采用分页，采用不停下拉加载更多*/
+.getmore {padding-top: 10px;}
+.getmore .box{background-color: #eeeeee;text-align: center;font-size: 14px;color: #999;}
+.getmore .box:hover{background-color: #e5e5e5;cursor: pointer;}
+#youload:hover{color: #666666;}
+#autoload {color: #336699;float: right;padding: 1px 5px;text-align: center;}
+#autoload:hover{background-color: #ffffff;border-color: #ddd;border-width: 0 1px 1px 0;border-style: solid;}
+
+/*info内容页面*/
+#trait {
+  background: url("../images/trait.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  display: block;
+  height: 45px;
+  position: absolute;
+  width: 45px;
+}
+
+.box .goodsdesc{padding:10px;}
+.box .goodsdesc dd{color: #666666;margin-bottom: 7px;padding: 7px 10px;}
+#description{height: 50px;overflow: hidden;}
+.box .goodsdesc ul{}
+.box .goodsdesc ul li {background: none repeat scroll 0 0 #eeeeee;box-shadow: 1px 1px 1px #EEEEEE;float: left;height: 21px;line-height: 21px;margin-left: 3px;padding: 0 3px;}
+.box .goodsdesc ul li:hover{background-color: #3688c2;box-shadow: 1px 1px 1px #3688c2;cursor: pointer }
+.box .goodsdesc ul li a{color: #666;}
+.box .goodsdesc ul li a:hover{color: #ffffff;}
+.box .goodsdesc .more{float: right;}
+
+/* 发布者信息*/
+.publicman{padding:10px;}
+.publicman .head{height: 40px;}
+.publicman .head .avater { border: 1px solid #EEEEEE; padding: 1px; }
+.publicman .head .username { color: #999999; font-size: 13px; height: 40px; line-height: 20px; padding-left: 10px; width: 136px; }
+.publicman .info {margin-top: 10px;} .publicman .info li { color: #666666; height: 25px; line-height: 25px; }
+.publicman .info li a { color: #666666; }
+.publicman .info li .value { display: block; float: left; }
+.publicman .info li .tips { float: right; margin-left: 5px; margin-right: 27px; }
+.publicman .info li .key{ color: #666666; display: block; float: left; width: 80px; }
+
+/*物品详情 从这里开始,不些前面的.box,以后找到有经验的前端开发工程师,一定要问问 */
+.infodetail  {  padding: 10px;color: #666666; }
+.infodetail img  {  width:580px; }
+.infodetail .pic { margin-bottom: 10px; text-align: center; }
+.infodetail .pic img { border: 1px solid #EEEEEE; box-shadow: 1px 1px 1px #EEEEEE; padding: 1px; }
+.infodetail .pic p { color: #666666; height: auto; line-height: 26px; margin: 5px auto 0; width: 620px; }
+
+/*该会员的其他的物品*/
+#togglebtn { border: 1px solid #EEEEEE; display: block; float: left; font-size: 16px; height: 15px; width:15px; line-height: 15px; margin-right: 10px; margin-top: 9px; text-align: center; }
+#togglebtn:hover{background-color: #eee;cursor:pointer;}
+
+/*模仿qq聊天的问询列表 S*/
+.commentlist ul li { line-height:35px; height:100%;}
+.question,.answer {height:100%;margin-top:5px;}
+.question > a {
+  display: block;
+  float: left;
+  height: 30px;
+  margin-right: 5px;
+  width: 30px;
+}
+.question > span {
+  background: #1D8EDA;
+  display: block;
+  float: left;
+  height: 100%;
+  width: 140px;
+  text-align: center;
+  color:#fff;
+}
+.answer > a {
+  display: block;
+  float: right;
+  margin-left: 5px;
+  height: 30px;
+  margin-right: 5px;
+  width: 30px;
+}
+.answer > span {
+  background: #EA604C;
+  color: #FFFFFF;
+  display: block;
+  float: right;
+  height: 100%;
+  text-align: center;
+  width: 140px;
+}
+/*模仿qq聊天的问询列表 E*/
+
+/*列表页*/
+.pagelist { margin-right:20px;  border:1px solid #ddd; }
+.pagelist .boxhead{height:30px; line-height:30px;}
+.pagelist .boxlist ul { padding-bottom:20px;}
+.pagelist .boxlist ul li { line-height:35px !important; height:35px !important; border-bottom:1px dotted #ddd}
+.pagelist .boxlist ul li .title{ font-size:14px;}
+.pagelist .boxlist ul li .time{}
+/*图片列表页*/
+.pagepiclist { margin-right:20px;  border:1px solid #ddd; }
+.pagepiclist .boxhead{height:30px; line-height:30px;}
+.pagepiclist .boxlist { padding-right:0px;}
+.pagepiclist .boxlist ul { padding-bottom:20px;}
+.pagepiclist .boxlist ul li { float:left; height:150px; margin-top:10px; margin-right:9px; width:165px;}
+.pagepiclist .boxlist ul li img{ font-size:14px;width:165px;}
+.pagepiclist .boxlist ul li .title{ float:none;}
+.pagepiclist .boxlist ul li .time{}
+/*扩展列表页*/
+.pageexpand { margin-right:20px;  border:1px solid #ddd; }
+.pageexpand .boxhead{height:30px; line-height:30px;}
+.pageexpand .boxlist ul li { height:90px; float:none; border-bottom:1px dotted #ddd}
+.pageexpand .boxlist ul li .pic { float:left;}
+.pageexpand .boxlist ul li .pic img { width:110px; height:80px;}
+.pageexpand .boxlist ul li .info { float:left; margin-left:20px;}
+.pageexpand .boxlist ul li .info .title { line-height:25px; float:none; font-size:14px; font-weight:bold}
+.pageexpand .boxlist ul li .info .description { line-height:25px;}
+.pageexpand .boxlist ul li .info .ext{ color: #999; line-height:22px; float:none}
+/*内容页*/
+.pagecontent {margin-right:20px; }
+.pagecontent .boxcontent h1{height:45px;  font-size:16px; font-weight:bold; text-align:center}
+.pagecontent .boxcontent .info { border-top:1px dotted #ccc; text-align:center}
+.pagecontent .boxcontent .content { font-size:14px; line-height:35px; margin-top:10px;}
+.pagecontent .boxhead {margin-top:20px;}
+.pagecontent .boxhead h3 { font-size:12px; font-weight:normal;}
+.pagecontent .boxlist {}
+.pagecontent .boxlist li { float:left; width:50%;}
+.pagecontent .boxlist li .line { padding-right:10px !important;}
+.pagecontent .updown { line-height:25px; height:25px; padding-left:10px; padding-right:10px; color:#666;}
+.pagecontent .updown a {color:#666}
+.pagecontent .updown .previous { float:left;}
+.pagecontent .updown .next { float:right}
+/*扩展模型内容页*/
+.contentexpand { padding:10px; height:310px;}
+.contentexpand .imagebox {float:left; width:330px; border:1px solid #ddd;}
+.contentexpand .imagebox .pic { width: 320px;height: 250px;margin-right: auto;margin-left: auto;}
+.contentexpand .imagebox .tabs { padding-left:5px;height:75px;}
+.contentexpand .imagebox .tabs a { display:block; float:left; margin-right:5px; padding:2px; border:1px solid #ddd}
+.contentexpand .imagebox .tabs img { width:70px; height:60px;}
+.contentexpand .info {float:left; margin-left:10px; width:340px;}
+.contentexpand .info .title { font-size:14px; height:35px; border-bottom:1px dotted #ddd}
+.contentexpand .info .title h1 { font-weight:bold}
+.contentexpand .info .description { font-size:12px; line-height:22px; padding-top:10px; color:#666;border-bottom:1px dotted #ddd; padding-bottom:10px;}
+.contentexpand .info .list {}
+.contentexpand .info .list ul {}
+.contentexpand .info .list ul li { line-height:35px; height:35px;border-bottom:1px dotted #ddd}
+.contentexpand .info .list ul li .name { padding-right:10px; color:#666}
+
+/*会员衷心页面左侧菜单*/
+.box .memberpanel{padding: 10px;min-height: 400px;}
+.box .memberpanel ul{}
+.box .memberpanel ul li{background: none repeat scroll 0 0 #EEEEEE; color: #555; font-size: 14px; font-weight: normal; height: 40px; line-height: 40px; margin-bottom: 1px;text-align: center;}
+.box .memberpanel ul li:hover{background-color: #369;cursor: pointer;color:#fff;}
+.box .memberpanel ul li a{display:block;height:40px;width: 194px;}
+.box .memberpanel ul li a:hover{color:#fff;}
+
+/*会员物品发布页面*/
+.box .form{padding: 10px;}
+.box .form .tab { border-bottom: 2px solid #8CB3DF; height: 30px; line-height: 30px; margin-left: 15px; margin-right: 15px; margin-top: 10px; padding-top: 10px; }
+.box .form .tab li { display: block; float: left; height: 30px; line-height: 30px; margin-right: 5px; padding-left: 15px; padding-right: 15px; }
+.box .form .tab li:hover, .selected { background-color: #8CB3DF; color: #FFFFFF;cursor: pointer; }
+
+.box .form .info{margin-top:10px;}
+.box .form .info dl{width:100%;float:left;border-top:1px dotted #E8E8E8; padding:5px 0;}
+.box .form .info dl dt{float:left; width:110px; text-align:right; line-height:40px; font-weight:normal;font-size: 14px;color: #666666;}
+.box .form .info dl dd{float:left; line-height:40px; padding-left:10px;}
+.box .form .info dl dd.t span{color:#C00;}
+.box .form .info dl dd.t{color:#888;padding-left:17px;background:url(../images/pic.gif) -138px 15px no-repeat; margin-left:10px;}
+
+.box .form .int { border: 1px solid #A4BCCC; color: #3E3E3E; height: 30px; line-height: 30px; padding-left: 5px; padding-right: 5px; }
+.box .form .int:hover{border:1px solid #5EA2D9;background-color:#EDF3F8;}
+.box .form select { border: 1px solid #A4BCCC; color: #3E3E3E; padding: 3px; }
+.box .form .button_small { background-image: url("../images/button_small.png"); background-repeat: repeat-x; border: 1px solid #CCCCCC; color: #666666; cursor: pointer; display: inline-block; font-size: 12px; height: 30px; line-height: 30px; padding-left: 10px; padding-right: 10px;}
+#litpicover img{vertical-align: middle;}
+
+.box .form .interror{border-color:red;}
+
+
+.box .form .btnbig { cursor:pointer;background: url("../images/pic.gif") repeat scroll 0 0 rgba(0, 0, 0, 0); border: medium none; color: #FFFFFF; font-size: 14px; height: 25px; margin-top: 5px; padding: 5px 10px; width: 81px; }
+.box .form .btnbig:hover{color:#eee;}
+.box .form .otherbtn {background-position: 0 -25px;}
+
+/*会员注册页面*/
+.reg-login-form .form{padding: 30px 50px;}
+.reg-login-form .form-right{border-left:1px solid #eee;}
+.reg-login-form .boxhead{height: 55px;font-size: 16px;}
+
+.reg-login-form .vercode{display: inline-block;vertical-align: middle;cursor: pointer;}
+
+.oauth .qq_oauth_login,.oauth .sina_oauth_login{ background: url(../images/ico-regi.png); display: block; height: 45px; margin-bottom: 10px; width: 311px; }
+.oauth .qq_oauth_login{background-position: 0 -613px;}
+.oauth .qq_oauth_login:hover{background-position: 0 -668px;}
+.oauth .sina_oauth_login{background-position: 0 -724px;}
+.oauth .sina_oauth_login:hover{background-position: 0 -779px;}
+
+.oauth .qq_oauth_reg,.oauth .sina_oauth_reg{ background: url(../images/ico-regi.png); display: block; height: 45px; margin-bottom: 10px; width: 311px; }
+.oauth .qq_oauth_reg{background-position: 0 -169px;}
+.oauth .qq_oauth_reg:hover{background-position: 0 -219px;}
+.oauth .sina_oauth_reg{background-position: 0 -270px;}
+.oauth .sina_oauth_reg:hover{background-position: 0 -320px;}
+
+.reg-login-form dl{width:100%;float:left;padding:5px 0;clear:both;}
+.reg-login-form dl dt{float:left;width: 70px; text-align:right; line-height:40px; font-weight:normal;font-size: 14px;color: #666666;}
+.reg-login-form dl dd{float:left; line-height:40px; padding-left:10px;}
+.reg-login-form dl dd.t{color:#888;padding-left:17px;background:url(../images/pic.gif) -138px 15px no-repeat; margin-left:10px;}
+.reg-login-form dl dd.error{color:#C00;}
+
+.reg-login-form dl dd .int{width:230px;height:40px;padding-left: 10px;}
+.reg-login-form .rememberme { display: block; float: left; height: 30px; line-height: 30px; vertical-align: middle; width: 100px; }
+.reg-login-form .submitbtn {float: right;margin-right: 0;}
+
+
+
+/*登录注册的弹出层*/
+#login-reg-float { left: 50%; margin-left: -405px; position: absolute; top: 50%; width: 810px; z-index: 300; }
+#login-reg-float .reg-login-form .form { padding: 10px; }
+
+/*全屏遮盖*/
+#allscreen { background: none repeat scroll 0 0 #000000; height: 2000px; opacity: 0.36; position: absolute; width: 100%; z-index: 1; }
+
+#close-float{ background: url("../images/close.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); float: right; height: 25px; position: absolute; right: -10px; top: -10px; width: 25px; opacity: 0.7;}
+#close-float:hover{opacity: 1;cursor: pointer;}
+
+
+
+
+/*会员中心 信息列表*/
+.page_main {
+    padding: 10px 20px 20px;
+}
+.page_main h3 {
+    border-bottom: 2px solid #D0DFEA;
+    line-height: 35px;
+}
+.page_menu {
+    background-color: #F7F8FA;
+    border: 1px solid #DBE7EF;
+    height: 25px;
+    line-height: 25px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.page_table {
+    padding-top: 5px;
+}
+.page_table table {
+    table-layout: fixed;
+}
+.page_table table td {
+    border-bottom: 1px dotted #C6D8E6;
+    padding: 10px;
+}
+.table_list {
+}
+.table_list table {
+    border-bottom: 1px solid #A2C1E6;
+}
+.table_list th {
+    background-color: #F5F6F8;
+    border-bottom: 1px solid #A2C1E6;
+    font-weight: bold;
+    padding: 5px 10px;
+    text-align: center;
+}
+.table_list .odd {
+    background-color: #f7f7f7;
+}
+.table_list td {
+	text-align: center;
+}
+.page_tool {
+    height: 35px;
+    padding-bottom: 20px;
+}
+.sequence {
+    border: 1px dashed #DDDDDD;
+    text-align: center;
+    width: 50px;
+}
+.page_tool .function {
+    color: #2D6DA2;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 20px;
+}
+.page_tool .page {
+    color: #2D6DA2;
+    float: right;
+    font-size: 12px;
+    line-height: 20px;
+    padding-right: 15px;
+}
+.page_tool .page a {
+    margin-right: 5px;
+}
+.page_tool .page a:hover {
+}
+.page_tool .page .current {
+    color: #CCCCCC;
+    margin-right: 5px;
+}
+.page_tool .page .disabled {
+    color: #CCCCCC;
+}
+.page_tool .page input {
+    border: 1px solid #D9E2EC;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*404页面*/
+.error404 { background-image: url(../images/404bg.jpg); background-repeat: no-repeat; width: 856px; height: 250px; margin-right: auto; margin-left: auto; margin-top: 50px;}
+.error404 .taglist { padding-top: 100px; padding-left: 300px;}
+.error404 .taglist a{color:#666}
+.error404 .home { color:#3e4e68; padding-top: 5px; padding-left: 300px; font-size:14px; font-weight:bold}
+.error404 .home a {color:#3e4e68; }
+/*留言板*/
+.guestbook {padding:20px}
+.guestbook .list { border-bottom:1px dotted #ccc; padding-bottom:10px;}
+.guestbook .list .content { font-size:14px; line-height:25px; padding-bottom:10px; }
+.guestbook .list .content .reply {border:1px solid #ddd; line-height:25px; padding-left:5px; padding-right:5px; margin-top:10px; background-color:#f4f4f4}
+.guestbook .list .info{color:#666; line-height:25px;}
+.guestbook .formsub { padding:10px;}
+.guestbook .formsub h5 { line-height:30px; font-size:14px; font-weight:bold}
+.guestbook .formsub .guest_post { padding-top:10px;}
+.guestbook .formsub .guest_post .guest_post_hr { line-height:40px; height:40px;}
+.guestbook .formsub .guest_post .guest_post_text { border:1px solid #ccc;margin-left:10px; line-height:25px; height:25px; width:250px;}
+.guestbook .formsub .guest_post .guest_post_content { border:1px solid #ccc; height:100px; width:100%; margin-top:10px;}
+.guestbook .formsub .subdiv { margin-top:10px;}
+.guestbook .formsub .subdiv .button { border:1px solid #ddd; width:50px; line-height:27px; height:27px; vertical-align: top}

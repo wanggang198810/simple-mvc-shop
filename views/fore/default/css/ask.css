@@ -1,0 +1,109 @@
+/*信息页面 低估固定 问询窗口 从ask.39.net 直接复制  S */
+.asks {
+    bottom: 0;
+    height: 210px;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+}
+.ask_box {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #5592DA;
+    cursor: default;
+    overflow: hidden;
+    width: 230px;
+}
+.ab_bt {
+    background: none repeat scroll 0 0 #5592DA;
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    width: 100%;
+}
+.ab_bt strong {
+    background: url("../images/bg_blue.png") no-repeat scroll -118px -297px rgba(0, 0, 0, 0);
+    float: left;
+    height: 16px;
+    margin: 7px 0 0 11px;
+    overflow: hidden;
+    text-indent: -500px;
+    width: 77px;
+}
+.ab_bt a {
+    background: url("../images/bg_points.gif") no-repeat scroll 5px -340px #FFFFFF;
+    float: right;
+    height: 16px;
+    margin: 6px;
+    overflow: hidden;
+    width: 17px;
+}
+.ab_bt a:hover {
+    background-color: #EAF1FB;
+}
+.ab_con {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+.ab_con form {
+    overflow: hidden;
+    padding: 4px 0 13px;
+    width: 100%;
+}
+.ab_con form p {
+    color: #666666;
+    float: left;
+    font: 14px/26px "Microsoft YaHei",SimSun;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+}
+.ab_con form textarea {
+    background: url("../images/bg_tbox.png") repeat-x scroll 0 -3px #FFFFFF;
+    border: 1px solid #E7E7E7;
+    color: #BBBBBB;
+    float: left;
+    font-size: 12px;
+    height: 80px;
+    line-height: 20px;
+    margin-left: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 6px 6px 6px 8px;
+    resize: none;
+    width: 194px;
+}
+.ab_con form .btn {
+    background: url("../images/bg_blue.png") no-repeat scroll -178px -184px rgba(0, 0, 0, 0);
+    border: medium none;
+    cursor: pointer;
+    float: left;
+    height: 23px;
+    margin: 14px 0 0 78px;
+    padding: 0;
+    width: 64px;
+}
+.ab_con form .btn_hover {
+    background-position: -178px -207px;
+}
+.ask_box_mini {
+    float: left;
+    overflow: hidden;
+}
+.ask_box_mini a {
+    background: url("../images/bg_blue.png") no-repeat scroll -118px -184px rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    display: block;
+    height: 113px;
+    overflow: hidden;
+    text-indent: -500px;
+    width: 30px;
+}
+.ask_box_mini a:hover {
+    background-position: -148px -184px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+/*信息页面 低估固定 问询窗口 从ask.39.net 直接复制  E */

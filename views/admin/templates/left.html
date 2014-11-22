@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="views/admin/css/admin.css">
+    <script type="text/javascript">
+        function  heightSet(thisFrame){
+            if($.browser.mozilla || $.browser.msie){
+                bodyHeight =window.frames["a_update"].document.body.scrollHeight;
+            }else{
+                bodyHeight =thisFrame.contentWindow.document.documentElement.scrollHeight;
+            }
+            document.getElementById("a_update").height=bodyHeight;
+
+        }
+    </script>
+</head>
+
+<body style="overflow-x:hidden;" class="leftbody">
+
+<div class="lefttop">{[ $leftname ]}</div>
+<div class="leftmenu">
+    {[ $leftmenu ]}
+</div>
+
+
+
+
+
+</body></html>

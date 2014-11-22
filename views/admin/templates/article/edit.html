@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title></title>
+
+    <link href="views/admin/css/admin.css" rel="stylesheet" type="text/css">
+    <script src="include/jsmain.js" type="text/javascript"></script>
+    <script src="include/admin.js" type="text/javascript"></script>
+
+    <!-- 一下三行为kindeditor-->
+    <script src="include/kindeditor/lang/zh_CN.js" charset="utf-8" type="text/javascript"></script>
+    <script src="include/kindeditor/kindeditor-min.js" charset="utf-8" type="text/javascript"></script>
+    <link href="include/kindeditor/themes/default/default.css" rel="stylesheet">
+    <script>
+        var editor;
+        KindEditor.ready(function(K) {
+            editor = K.create('textarea[name="detail"]', {
+                //这里做一个配置
+                minWidth : 560,
+                width : 560,
+                height : 300,
+                allowFileManager : true,
+                items :
+                        [
+                            'source', '|', 'template','plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+                            'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'clearhtml', 'removeformat', 'quickformat', '|', 'fullscreen','about', '/',
+                            'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+                            'italic', 'underline', 'lineheight', '|', 'image','multiimage',
+                            'flash', 'media', 'table', 'emoticons', 'map',
+                            '|',
+                        ],
+                resizeType : 1,   //2时可以拖动改变宽度和高度，1时只能改变高度，0时不能拖动。
+                urlType : '', //改变站内本地URL，可设置”“、”relative”、”absolute”、”domain”。
+                // 空为不修改URL，relative为相对路径，absolute为绝对路径，domain为带域名的绝对路径。
+                // 数据类型: String  默认值: “”
+            });
+
+        });
+    </script>
+    </head>
+<body>
+<div class="maintop">当前位置：文章修改内容</div>
+<div class="main">
+    <ul class="switchs"><li class="" id="s1">基本内容</li></ul>
+    <div class="info">
+
+            <div class="info">
+                    <form action="?c=a_article&amp;a=edit_save" method="post" id="gform">
+                    <input type="hidden" name="id" value="{[$article.id]}">
+                    <div class="tabdiv" id="infos1">
+
+                        <dl style="border:0;"><dt>选择类别：</dt>
+                            <dd>
+                                <select name="cid">
+                                    <optionvalue="">选择所属类别</option>
+                                    {[ section name=sec1 loop=$articleCategoryList]}
+                                    <option value="{[ $articleCategoryList[sec1].id ]}" {[ if ($article.cid == $articleCategoryList[sec1].id)]} selected="selected" {[/if]}>{[ $articleCategoryList[sec1].fullname ]}</option>
+                                    {[ /section ]}
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl><dt>标题：</dt><dd><input type="text" name="title" id="title" class="int" value="{[$article.title]}" style="width:300px;"></dd></dl>
+                        <dl><dt>内容：</dt>
+                            <dd>
+                                <!-- 此处做学习只用，怎么把功能调取出来
+                                    <a onclick="editor.insertHtml('[doyo|page]');" href="javascript:;">插入分页符</a>
+                                -->
+                                <textarea class="int" style="width:550px; height:200px;visibility: hidden;" id='detail' name="detail">{[$article.detail]}</textarea>
+                            </dd>
+                        </dl>
+
+                    </div>
+
+
+
+                    <dl>
+                        <dt>&nbsp;</dt>
+                        <dd>
+                            <input type="submit" name="submit" id="submit" value="发 布" class="btnbig">
+                            <input type="submit" id="" value="存草稿" class="btnbig otherbtn">
+                        </dd>
+                    </dl>
+
+                </form>
+            </div>
+            <div class="fn-clear"></div>
+        </div>
+    </div>
+</div>
+
+
+
+</body></html>

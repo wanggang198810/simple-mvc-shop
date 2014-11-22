@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{[$GLOBALS.config.site.site_title]} </title>
+    <meta name="keywords" content="{[$GLOBALS.config.site.site_keywords]} " />
+    <meta name="descriptionription" content="{[$GLOBALS.config.site.site_descriptionription]}" />
+    <script type="text/javascript">
+    </script>
+    <link href="{[$GLOBALS.inc.css_path]}/index.css" type="text/css" rel="stylesheet">
+    {[include file="jscss.html"]}
+</head>
+
+<body>
+    <!--引入公共头部 S-->
+    {[include file="head.html"]}
+    <!--引入公共头部 E-->
+
+    <!--网站幻灯 + 通知 S-->
+    <div class="wrap mt10">
+
+            <div class="box bgf">
+                <div id="pagenav">
+                    当前位置:&nbsp; <a href="ss">首页</a> &gt; <a href="ss">二手物品列表页</a>
+                </div>
+            </div>
+
+        <div class="fn-clear"></div>
+    </div>
+    <!--网站幻灯 + 通知 E-->
+
+
+    <!-- 搜索区域 + 发布入口 S-->
+    <div class="wrap mt10">
+        <div class="main fn-left bgf">
+            <div class="box">
+                <div class="boxhead">
+                    <h3>分类搜索</h3>
+                    <ul class="category">
+                        {[section name=sec1 loop=$categoryList]}
+                        <li><a href="index.php?c=info&a=lists&id={[$categoryList[sec1].id]}" target="_self">{[$categoryList[sec1].name]}</a></li>
+                        {[/section]}
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!--发布入口 S-->
+        <div class="sidebar fn-right bgf">
+            <div class="box">
+                <ul id="enterence">
+                    <li class="firstone"><a href='javascript:void(0)' default_href="index.php?c=member&a=publish" onclick="ajax_islogin($(this));">我要卖</a></li>
+                    <li><a href="index.php?c=member&a=publish">我要买</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--发布入口 E-->
+        <div class="fn-clear"></div>
+    </div>
+    <!-- 搜索区域 + 发布入口 E-->
+
+    <!-- 分类最新信息 S-->
+    <div class="wrap mt10">
+        <div class="main fn-left bgf">
+            <div class="box" id="container">
+                <div class="boxhead">
+                    <h3>分类最新信息</h3>
+                    
+                </div>
+
+                {[section name=sec1 loop=$infoList]}
+                <div class="boxpic">
+                    <div class="pic">
+                        <a title="" target="_blank" href="index.php?c=info&id={[ $infoList[sec1].id]}">
+                            <img height="90" width="110" alt="{[ $infoList[sec1].title]}" src="{[ if ($infoList[sec1].litpic == '')]} {[$GLOBALS.inc.image_path]}/none.jpg {[else]} {[ $infoList[sec1].litpic ]} {[/if]}">
+                        </a>
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a title="" target="_blank" href="index.php?c=info&id={[ $infoList[sec1].id]}">{[ $infoList[sec1].title]}</a>
+                            <span class="time">{[ $infoList[sec1].addtime|date_format:"%m-%d %H:%M"]}</span>
+                        </div>
+                        <p>{[ $infoList[sec1].description]}</p>
+                        <ul>
+                            <li><a href="">二手自行车</a></li>
+                            <li><a href="">八成新</a></li>
+                        </ul>
+                        <ul class="more none">
+                            <li><a href="">浏览人数(6)</a></li>
+                            <li><a href="index.php?c=info&id={[ $infoList[sec1].id]}">查看详情</a></li>
+                        </ul>
+                    </div>
+                </div>
+                {[ /section ]}
+
+
+
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('.boxpic').hover(function(){
+                            $(this).find('.more').toggle();
+                        });
+                    });
+                </script>
+
+
+                <!-- 分页栏 S -->
+                <div class="pages">
+                    <ul>
+                        <li><a href="">首页</a></li>
+                        <li><a href="">第一页</a></li>
+                        <li><a href="">第二页</a></li>
+                        <li><a href="">尾页</a></li>
+                    </ul>
+                </div>
+               <!-- 分页栏 S -->
+
+
+
+
+            </div>
+
+            <div class="box getmore mt10" id="getmore">
+
+                <div class="box bgf">
+                    <span id="youload">[二手自行车信息还有<span id='leavesum' class="red"> 26 </span>条] 是否继续加载</span> <span id="autoload">[开启自动加载]</span>
+                </div>
+
+                <div class="fn-clear"></div>
+            </div>
+
+
+            <script type="text/javascript">
+
+                $('#youload').click(function(){
+                    for(i=0;i<3;i++)
+                    {
+                        $('#container').append($("#test").html());
+                    }
+                    $('.test').show('slow');
+                });
+
+                $(window).scroll(function(){
+                    // 当滚动到最底部以上20像素时， 加载新内容
+                    if ($(document).height() - $(this).scrollTop() - $(this).height()<20){
+                        $('#container').append($("#test").html());
+                    }
+                });
+            </script>
+        </div>
+
+        <div id="test" class="none">
+            <div class="boxpic none test">
+                <div class="pic"><a title="" target="_blank" href="/2/8.html"><img height="90" width="110" alt=" " src="{[$GLOBALS.inc.image_path]}/example.jpg"></a></div>
+                <div class="info">
+                    <div class="title">
+                        <a title="" target="_blank" href="/3/04-12/8.html">老外街头救晕倒中国小伙 奇...</a>
+                        <span class="time">2013-04-12</span>
+                    </div>
+                    <p>巴基斯坦留学生哈马德讲述救人经过。记者杨涛摄原标题：小伙子晕倒引来路人围观有的拍照有的拍视...</p>
+                    <ul>
+                        <li><a href="">二手自行车</a></li>
+                        <li><a href="">八成新</a></li>
+                    </ul>
+                    <ul class="more none">
+                        <li><a href="">浏览人数(6)</a></li>
+                        <li><a href="">查看详情</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--边栏-->
+        <div class="sidebar fn-right bgf" >
+            <div class="box">
+                <div class="boxhead">
+                    <h3>网站公告</h3>
+                </div>
+                <div class="boxlist">
+                    <script type="text/javascript">ajax_set_html("webnotice","index.php?c=api&a=getnotice");</script>
+                    <ul id="webnotice">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--END-->
+        <div class="fn-clear"></div>
+
+    </div>
+    <!-- 分类最新信息 E-->
+
+
+
+    <div class="wrap mt10">
+
+        <div class="box bgf">
+            这是通栏的，放点广告吧
+        </div>
+
+        <div class="fn-clear"></div>
+    </div>
+
+
+    <!--引入公共脚部 S-->
+    {[include file="foot.html"]}
+    <!--引入公共脚部 E-->
+</body>
+</html>

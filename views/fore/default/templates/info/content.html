@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{[$GLOBALS.config.site.site_title]} </title>
+    <meta name="keywords" content="{[$GLOBALS.config.site.site_keywords]} " />
+    <meta name="description" content="{[$GLOBALS.config.site.site_description]}" />
+    <script type="text/javascript">
+    </script>
+    <link href="{[$GLOBALS.inc.css_path]}/index.css" type="text/css" rel="stylesheet">
+    {[include file="jscss.html"]}
+</head>
+
+<body>
+    <!--引入公共头部 S-->
+    {[include file="head.html"]}
+    <!--引入公共头部 E-->
+
+    <!--网站面包屑  S-->
+    <div class="wrap mt10">
+
+            <div class="box bgf">
+                <div id="pagenav">
+                    当前位置:&nbsp; <a href="index.php">首页</a> &gt; <a href="index.php?c=info&a=lists&id={[$category.id]}">{[$category.name]}</a> &gt;{[ $info.title]}
+                </div>
+            </div>
+
+        <div class="fn-clear"></div>
+    </div>
+    <!--网站面包屑  E-->
+
+
+    <!-- 物品简要 + 发布者信息 S-->
+    <div class="wrap mt10">
+        <div class="main fn-left ">
+		
+		{[if ($info.trait != '')]}
+			<!-- 推荐图标 S-->
+			<span id='trait'></span>
+			<!-- 推荐图标 S-->
+		{[/if]}
+            <div class="box bgf">
+                <div class="boxhead">
+                    <h3>【{[$category.name]}】{[ $info.title]}</h3>
+                    <span class="time">{[ $info.updatetime|date_format:"%m-%d %H:%M"]}</span>
+                </div>
+                <div class="goodsdesc">
+                    <dl>
+                        简介：<dd id="description">{[ $info.description]}</dd>
+                        标签：<dd>
+                                <ul>
+                                    <li><a href="">{[$category.name]}</a></li>
+                                    <li><a href="">{[ $info.newdegree]}成新</a></li>
+                                    <li><a href="">二手价:{[ $info.currentprice]}元</a></li>
+                                </ul>
+                                <ul class="more">
+                                    <li>浏览人数(<script type="text/javascript" src="index.php?c=info&amp;a=hits&amp;id={[ $info.id]}"></script>)</li>
+                                    <li>问询人数(4)</li>
+                                </ul>
+                            </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="fn-clear"></div>
+			
+			<!-- 物品详情 S-->
+			<div class="box bgf mt10" id="container">
+				<div class="boxhead">
+					<h3>物品详情</h3>
+				</div>
+				<div class="infodetail">
+					<div class="pic">
+						<p>{[ $info.detail]}</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="fn-clear"></div>
+			<!-- 物品详情 E-->
+	
+            <!--该会员发布的其他物品 S-->
+            <div class="box bgf mt10">
+                <div class="boxhead" id="othergoods">
+                    <span class="time" id="togglebtn">+</span>
+                    <h3>该会员发布的其他物品</h3>
+                    <span class="time">有需要，一起买，或许会便宜哦～</span>
+
+                </div>
+                <div class="boxpic">
+                    <div class="pic"><a href="/2/8.html" target="_blank" title=""><img height="90" width="110" src="/ershou2014/views/fore/default/images/example.jpg" alt="老外街头救晕倒中国小伙 奇怪他人只拍照不施救"></a></div>
+                    <div class="info">
+                        <div class="title">
+                            <a href="/3/04-12/8.html" target="_blank" title="">老外街头救晕倒中国小伙 奇...</a>
+                            <span class="time">2013-04-12</span>
+                        </div>
+                        <p>巴基斯坦留学生哈马德讲述救人经过。记者杨涛摄原标题：小伙子晕倒引来路人围观有的拍照有的拍视...</p>
+                        <ul>
+                            <li><a href="">二手自行车</a></li>
+                            <li><a href="">八成新</a></li>
+                        </ul>
+                        <ul class="more none" style="display: none;">
+                            <li><a href="">浏览人数(6)</a></li>
+                            <li><a href="">查看详情</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        $('.boxpic').hover(function(){
+                            $(this).find('.more').toggle();
+                        });
+                        $('#togglebtn').click(function(){
+                            $(this).html('-');
+                            $('.boxpic').slideToggle();
+                        });
+                    });
+                </script>
+
+                <div class="boxlist">
+                    <ul>
+                        <li> <span class="line">•</span> <span class="title"><a href="/duxcms2014/index.php/wenzhangerjiliebiaoyanshi/2013/04-12/3.html">10日：三星S4到货5400元 4S售3200元返2300元</a> </span> <span class="time">2013-04-12</span> </li>
+                        <li> <span class="line">•</span> <span class="title"><a href="/duxcms2014/index.php/wenzhangerjiliebiaoyanshi/2013/04-12/2.html">手机固话上网卡都将实名 网站泄露信息最高罚3万</a> </span> <span class="time">2013-04-12</span> </li>
+                        <li> <span class="line">•</span> <span class="title"><a href="/duxcms2014/index.php/wenzhangerjiliebiaoyanshi/2013/04-12/1.html">20万台小米2S瞬间售罄 电信版4月16日可购</a> </span> <span class="time">2013-04-12</span> </li>
+                    </ul>
+                </div>
+                <!--该会员发布的其他物品 E-->
+            </div>
+            <div class="fn-clear"></div>
+        </div>
+
+        <div class="sidebar fn-right">
+            <!--发布者信息 S-->
+            <div class="box bgf">
+                <!--
+                <div class="boxhead">
+                    <h3>发布者信息</h3>
+                </div>
+                -->
+                <div class="publicman">
+                    <div class="head">
+                        <div class="avater fn-left">
+                            <img height="40" width="40" alt="" src="{[$member.litpic]}">
+                        </div>
+                        <div class="username fn-left">
+                            <a title="{[$member.username]}">{[if ($member.nickname == '')]}{[$member.username]}{[else if]}{[$member.nickname]}{[/if]}</a>
+                            <br>注册时间：{[$member.addtime|date_format:'%Y-%m-%d']}
+                        </div>
+                        <div class="fn-clear"></div>
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li><span class="key">上次登录日期</span><span class="value">:&nbsp;2014-03-16</span></span></li>
+                            <li><span class="key">发布物品总数</span><span class="value">:&nbsp;{[$member.tradingcapcity]}</span><span class="tips"><a href="" target="_parent">查看所有</a></span></li>
+                            <li><span class="key">信用度</span><span class="value">:&nbsp;6</span><span class="tips"><a href="" target="_blank">计算规则</a></span></li>
+                            <li><span class="key">联系电话</span><span class="value">:&nbsp;{[if ($member.mobile != '')]}{[$member.mobile]}{[else if]}该会员未填写{[/if]}</span></span></li>
+                            <li><span class="key">QQ</span><span class="value">:&nbsp;{[if ($member.qq != '')]}<a href="http://wpa.qq.com/msgrd?v=3&amp;uin={[$member.qq]}&amp;site=qq&amp;menu=yes" target="_blank">
+                                <img border="0" title="点这里给我发消息" alt="点这里给我发消息" src="http://wpa.qq.com/pa?p=2:{[$member.qq]}:41">
+                            </a>{[else if]}该会员未填写{[/if]}</span></span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="fn-clear"></div>
+            <!--发布者信息 E-->
+            <!--发布入口 S-->
+            <div class="box bgf mt10">
+                <ul id="enterence">
+                    <li class="firstone"><a href="alert('请先登录')">我要卖</a></li>
+                    <li><a href="alert('请先登录')">我要买</a></li>
+                </ul>
+            </div>
+            <!--发布入口 E-->
+
+            <!--问询Q&A S-->
+            <div class="box bgf mt10">
+                <div class="boxhead">
+                    <h3>问询Q&A</h3>
+                </div>
+                <div class="commentlist">
+                    <ul>
+					
+					{[ section name=sec2 loop=$comment]}
+                        <li>
+						<!-- 每个循环判断是不是问询者，只要该条信息的touid是member.id -->
+						{[if ($comment[sec2].touid != 0 && $comment[sec2].touid == $member.id)]}
+                            <div class="question">
+                                <a><img src="/ershou2014/views/fore/default/images/slide3.jpg" width="30" height="30"></a>
+                                <span>{[$comment[sec2].content]}</span>
+                            </div>
+							<div class="fn-clear"></div>
+						{[/if]}
+						
+						<!-- 每个循环判断是不是回答者，只要该条信息的fromuid是member.id-->
+                        {[if ($comment[sec2].fromuid != 0 && $comment[sec2].fromuid == $member.id)]}   
+                            <div class="answer">
+                                <a><img src="/ershou2014/views/fore/default/images/example.jpg" width="30" height="30"></a>
+                                <span>{[$comment[sec2].content]}</span>
+                            </div>
+							<div class="fn-clear"></div>
+						{[/if]}
+                        </li>
+					{[/section]}
+                    </ul>
+                </div>
+                <div class="fn-clear"></div>
+            </div>
+            <!--问询Q&A E-->
+        </div>
+        <div class="fn-clear"></div>
+    </div>
+    <!-- 物品简要 + 发布者信息 E-->
+
+
+    
+
+
+    <!-- 问询框js引入 S-->
+    <!-- 设置 该文章的infoid 和 发布者 userid 便于ask表单重新生成form的action，post出去-->
+    <div class="none">
+        <input id="infoid" type="hidden" value="{[ $info.id]}" name="infoid">
+        <input id="userid" type="hidden" value="{[$member.id]}" name="userid">
+    </div>
+    <script src="{[$GLOBALS.inc.js_path]}/Ask_box.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{[$GLOBALS.inc.js_path]}/ask_tools.js" charset="UTF-8"></script>
+    <link href="{[$GLOBALS.inc.css_path]}/ask.css" type="text/css" rel="stylesheet">
+    <!-- 问询框js引入 E-->
+
+
+    <div class="wrap mt10">
+
+        <div class="box bgf">
+            1.这是通栏的，放点广告吧,<br>
+            2.提醒王刚在 main上部的标题+简介部分的区块左上角加 封口图标，或者标题第一行的中中上部加带缺口圆形图标，表明：卖完了<br>
+            3.把【我要买和我要卖】做一个随页面滚动的边栏或者不动，这样就全局 发布入口了，如果登录类，也做侧边，随时进入后台和接受消息
+        </div>
+
+        <div class="fn-clear"></div>
+    </div>
+
+
+    <!--引入公共脚部 S-->
+    {[include file="foot.html"]}
+    <!--引入公共脚部 E-->
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{[$GLOBALS.config.site.site_title]} </title>
+    <meta name="keywords" content="{[$GLOBALS.config.site.site_keywords]} " />
+    <meta name="descriptionription" content="{[$GLOBALS.config.site.site_descriptionription]}" />
+    <script type="text/javascript">
+    </script>
+    <link href="{[$GLOBALS.inc.css_path]}/index.css" type="text/css" rel="stylesheet">
+    {[include file="jscss.html"]}
+</head>
+
+<body>
+    <!--引入公共头部 S-->
+    {[include file="head.html"]}
+    <!--引入公共头部 E-->
+
+    <!--网站幻灯 + 通知 S-->
+    <div class="wrap mt10">
+
+            <div class="box bgf">
+                <div id="pagenav">
+                    当前位置:&nbsp; <a href="index.php">首页</a> &gt; <a href="ss">留言列表</a>
+                </div>
+            </div>
+
+        <div class="fn-clear"></div>
+    </div>
+    <!--网站幻灯 + 通知 E-->
+
+    <!-- 分类最新信息 S-->
+    <div class="wrap mt10">
+        <div class="main fn-left bgf">
+            <div class="box">
+                <div class="boxhead">
+                    <h3>留言列表</h3>
+                </div>
+                <div class="boxlist">
+                    <ul>
+                        {[assign var="i" value="1"]}
+                        {[section name=sec1 loop=$messageList]}
+                        <li>
+                            <span class="num">{[$i]}</span>
+                            <span class="title"><a href="index.php?c=article&id={[ $messageList[sec1].id]}" title=" ">{[ $messageList[sec1].title]}</a></span>
+							<span class="title" style="margin-left:10px;"><a href="index.php?c=article&id={[ $messageList[sec1].id]}" title=" ">{[ $messageList[sec1].content]}</a></span>
+                            <span class="time">{[ $messageList[sec1].addtime|date_format:"%m-%d %H:%M"]}</span>
+                        </li>
+                        {[assign var="i" value=$i+1]}
+                        {[/section]}
+                    </ul>
+                </div>
+
+                <!-- 分页栏 S -->
+                <div class="pages">
+                    <ul>
+                        <li><a href="">首页</a></li>
+                        <li><a href="">第一页</a></li>
+                        <li><a href="">第二页</a></li>
+                        <li><a href="">尾页</a></li>
+                    </ul>
+                </div>
+               <!-- 分页栏 S -->
+			   
+			   <div class="box bgf mt5">
+                <div class="boxhead">
+				<a id="#liuyan">
+                    <h3>马上留言</h3>
+                </div>
+                <div class="form">
+                        <div class="info">
+                            <form action="?c=message&amp;a=message_save" method="post" id="gform">
+								<dl><dt>标题：</dt><dd><input type="text" name="title" id="title" class="int" value="" style="width:300px;"></dd></dl>
+								<dl><dt>内容：</dt><dd><textarea name="content" style="width:400px; height:120px;" class="int"></textarea></dd></dl>
+                                <dl>
+								<dt>&nbsp;</dt>
+								<dd>
+									<input type="submit" name="submit" id="submit" value="发 布" class="btnbig">
+								</dd>
+                                </dl>
+
+                            </form>
+                        </div>
+						
+                    <div class="fn-clear"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!--边栏-->
+        <div class="sidebar fn-right" >
+            <!--发布入口 S-->
+            <div class="box bgf">
+                <ul id="enterence">
+                    <li class="firstone"><a href='javascript:void(0)' default_href="index.php?c=member&a=publish" onclick="ajax_islogin($(this));">我要卖</a></li>
+                    <li><a href="index.php?c=member&a=publish">我要买</a></li>
+                </ul>
+            </div>
+            <!--发布入口 E-->
+
+            <div class="box bgf mt5">
+                <div class="boxhead">
+                    <h3>网站公告</h3>
+                </div>
+                <div class="boxlist">
+                    <script type="text/javascript">ajax_set_html("webnotice","index.php?c=api&a=getnotice");</script>
+                    <ul id="webnotice">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--END-->
+        <div class="fn-clear"></div>
+
+    </div>
+    <!-- 分类最新信息 E-->
+
+
+
+    <div class="wrap mt10">
+
+        <div class="box bgf">
+            这是通栏的，放点广告吧
+        </div>
+
+        <div class="fn-clear"></div>
+    </div>
+
+
+    <!--引入公共脚部 S-->
+    {[include file="foot.html"]}
+    <!--引入公共脚部 E-->
+</body>
+</html>

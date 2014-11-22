@@ -1,0 +1,3 @@
+121
+a:4:{s:8:"template";a:1:{s:0:"";b:1;}s:9:"timestamp";i:1394587900;s:7:"expires";i:1394589340;s:13:"cache_serials";a:0:{}}
+Warning: Smarty error: unable to read resource: "" in /var/www/html/ershou2014/system/lib/smarty/Smarty.php on line 1095

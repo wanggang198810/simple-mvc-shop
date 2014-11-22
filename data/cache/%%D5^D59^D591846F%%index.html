@@ -1,0 +1,190 @@
+188
+a:4:{s:8:"template";a:1:{s:66:"/var/www/html/ershou2014/views/admin/templates/category/index.html";b:1;}s:9:"timestamp";i:1394638688;s:7:"expires";i:1394640128;s:13:"cache_serials";a:0:{}}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="views/admin/css/admin.css">
+    <script type="text/javascript" src="include/jsmain.js"></script>
+    <script type="text/javascript" src="include/admin.js"></script>
+    <script type="text/javascript">
+        function closec(tid){
+            if ($.browser.msie) {
+                if($("."+tid).css('display')=='inline'){
+                    $("."+tid).css('display','none');
+                    $("#"+tid).attr('class', 'classico1');
+                }else{
+                    $("."+tid).css('display','inline');
+                    $("#"+tid).attr('class', 'classico2');
+                }
+            }else{
+                if($("."+tid).css('display')=='table-row'){
+                    $("."+tid).css('display','none');
+                    $("#"+tid).attr('class', 'classico1');
+                }else{
+                    $("."+tid).css('display','table-row');
+                    $("#"+tid).attr('class', 'classico2');
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+Array
+
+<div class="maintop">当前位置：栏目管理</div>
+<div class="main">
+    <div class="oper"><a href="?c=a_links">链接分类管理</a><a href="?c=a_links&amp;a=tadd">添加链接分类</a><a href="?c=a_links&amp;a=adlist">链接管理</a><a href="?c=a_links&amp;a=add">添加链接</a></div><table width="100%" class="tablist">
+    <tbody><tr class="trbg">
+        <td width="30">ID</td>
+        <td width="30">排序</td>
+        <td>栏目名称</td>
+        <td width="110">所属频道</td>
+        <td width="100">快捷</td>
+        <td width="210">栏目操作</td>
+    </tr>
+    <form id="formall" action="?c=a_classtypes&amp;a=alledit" method="post"></form>
+    <input type="hidden" name="go" id="go" value="">
+    <tr class="classp">
+        <td>1</td>
+        <td><input type="text" class="int" name="orders[1]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft"><span class="classico2" id="c1" onclick="closec(&quot;c1&quot;)"></span>    <span style="color:#CCC"></span><a href="?c=a_classtypes&amp;a=edit&amp;tid=1">关于我们</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=1">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=1" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=1">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=1">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=1">删除</a></td>
+    </tr>
+    <tr class="classp">
+        <td>2</td>
+        <td><input type="text" class="int" name="orders[2]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft"><span class="classico1" id="c2" onclick="closec(&quot;c2&quot;)"></span>    <span style="color:#CCC"></span><a href="?c=a_classtypes&amp;a=edit&amp;tid=2">装修资讯</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=2">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=2" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=2">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=2">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=2">删除</a></td>
+    </tr>
+    <tr class="c2" style="display:none;">
+        <td>18</td>
+        <td><input type="text" class="int" name="orders[18]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft">    <span style="color:#CCC">|&mdash;</span><a href="?c=a_classtypes&amp;a=edit&amp;tid=18">装修指导</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=18">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=18" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=18">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=18">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=18">删除</a></td>
+    </tr>
+    <tr class="c2" style="display:none;">
+        <td>19</td>
+        <td><input type="text" class="int" name="orders[19]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft">    <span style="color:#CCC">|&mdash;</span><a href="?c=a_classtypes&amp;a=edit&amp;tid=19">行业资讯</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=19">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=19" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=19">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=19">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=19">删除</a></td>
+    </tr>
+    <tr class="c2" style="display:none;">
+        <td>26</td>
+        <td><input type="text" class="int" name="orders[26]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft">    <span style="color:#CCC">|&mdash;</span><a href="?c=a_classtypes&amp;a=edit&amp;tid=26">装修文化</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=26">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=26" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=26">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=26">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=26">删除</a></td>
+    </tr>
+    <tr class="classp">
+        <td>3</td>
+        <td><input type="text" class="int" name="orders[3]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft"><span class="classico1" id="c3" onclick="closec(&quot;c3&quot;)"></span>    <span style="color:#CCC"></span><a href="?c=a_classtypes&amp;a=edit&amp;tid=3">设计作品</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=3">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=3" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=3">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=3">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=3">删除</a></td>
+    </tr>
+    <tr class="c3" style="display:none;">
+        <td>24</td>
+        <td><input type="text" class="int" name="orders[24]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft">    <span style="color:#CCC">|&mdash;</span><a href="?c=a_classtypes&amp;a=edit&amp;tid=24">saesgdh</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=24">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=24" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=24">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=24">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=24">删除</a></td>
+    </tr>
+    <tr class="c3" style="display:none;">
+        <td>25</td>
+        <td><input type="text" class="int" name="orders[25]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft">    <span style="color:#CCC">|&mdash;</span><a href="?c=a_classtypes&amp;a=edit&amp;tid=25">adsgfagh</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=25">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=25" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=25">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=25">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=25">删除</a></td>
+    </tr>
+    <tr class="classp">
+        <td>4</td>
+        <td><input type="text" class="int" name="orders[4]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft"><span class="classico1" id="c4" onclick="closec(&quot;c4&quot;)"></span>    <span style="color:#CCC"></span><a href="?c=a_classtypes&amp;a=edit&amp;tid=4">服务案例</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=4">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=4" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=4">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=4">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=4">删除</a></td>
+    </tr>
+    <tr class="classp">
+        <td>7</td>
+        <td><input type="text" class="int" name="orders[7]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft"><span class="classico1" id="c7" onclick="closec(&quot;c7&quot;)"></span>    <span style="color:#CCC"></span><a href="?c=a_classtypes&amp;a=edit&amp;tid=7">联系我们</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=7">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=7" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=7">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=7">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=7">删除</a></td>
+    </tr>
+    <tr class="classp">
+        <td>8</td>
+        <td><input type="text" class="int" name="orders[8]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft"><span class="classico1" id="c8" onclick="closec(&quot;c8&quot;)"></span>    <span style="color:#CCC"></span><a href="?c=a_classtypes&amp;a=edit&amp;tid=8">公司动态</a>    </td>
+        <td>文章</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=8">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=article&amp;a=type&amp;tid=8" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=article&amp;tid=8">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=8">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=8">删除</a></td>
+    </tr>
+    <tr class="classp">
+        <td>11</td>
+        <td><input type="text" class="int" name="orders[11]" value="0" style="width:30px; text-align:center; padding:2px;"></td>
+        <td class="tdleft"><span class="classico1" id="c11" onclick="closec(&quot;c11&quot;)"></span>    <span style="color:#CCC"></span><a href="?c=a_classtypes&amp;a=edit&amp;tid=11">在线留言</a>    </td>
+        <td>表单(留言)</td>
+        <td><a href="?c=a_classtypes&amp;a=add&amp;tid=11">添加下级栏目</a></td>
+        <td>
+            <a href="index.php?c=message&amp;a=type&amp;tid=11" target="_blank">
+                预览</a>&nbsp;&nbsp;
+            <a href="?c=a_fields&amp;molds=message&amp;tid=11">字段管理</a>&nbsp;&nbsp;    <a href="?c=a_classtypes&amp;a=edit&amp;tid=11">编辑</a>&nbsp;&nbsp;	<a href="?c=a_classtypes&amp;a=del&amp;tid=11">删除</a></td>
+    </tr>
+    <tr><td colspan="6" class="tdleft">
+        &nbsp;<input type="button" name="g3" value="提交排序" class="btnmini" onclick="forma(1);">
+    </td></tr></tbody></table>
+
+</div>
+
+
+</body></html>

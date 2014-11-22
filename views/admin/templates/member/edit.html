@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml"><head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title></title>
+        <link type="text/css" rel="stylesheet" href="views/admin/css/admin.css">
+        <script type="text/javascript" src="include/jsmain.js"></script>
+        <script type="text/javascript" src="include/admin.js"></script>
+
+    </head>
+
+    <body>
+    <div class="maintop">当前位置：修改会员</div>
+    <div class="main">
+        <div class="info">
+            <form method="post" action="?c=a_member&amp;a=edit_save">
+                <input type="hidden" value="{[$info.id]}" name="id">
+
+                <dl style="border:0;"><dt>用户名称：</dt><dd>{[$info.username]}<input type="hidden" value="sas" name="user">    </dd></dl>
+                <dl><dt>用户密码：</dt><dd><input type="password" class="int" name="pass" value=""></dd><dd class="t">不修改请留空</dd></dl>
+                <dl><dt>邮箱：</dt><dd><input type="text" value="{[$info.email]}" class="int" name="email"></dd><dd class="t">不可留空</dd></dl>
+                <dl><dt>手机号：</dt><dd><input type="text" value="{[$info.mobile]}" class="int" name="email"></dd><dd class="t">不可留空</dd></dl>
+                <dl><dt>qq：</dt><dd><input type="text" value="{[$info.qq]}" class="int" name="email"></dd><dd class="t">可留空</dd></dl>
+                <dl><dt>会员分组：</dt><dd><select name="gid">
+                    <option selected="selected" value="2">1级&mdash;普通会员</option>
+                </select></dd></dl>
+                <dl>其他详情</dl>
+                <dl><dt>注册时间：</dt><dd>{[$info.addtime|date_format:"%m-%d %H:%M"]}</dd><dd></dd></dl>
+                <dl><dt>发布信息次数：</dt><dd>{[$info.tradingcapcity]}</dd><dd>物品信息：6</dd><dd>分类信息：26</dd></dl>
+                <dl><dt>交易量：</dt><dd>{[$info.tradingcapcity]}</dd><dd>成功：6</dd><dd>失败：6</dd><dd>正在交易：6</dd></dl>
+                <dl><dt>信用度：</dt><dd>{[$info.credit]}</dd><dd><a href="">计算规则</a></dd></dl>
+                <dl><dt>积分：</dt><dd>{[$info.email]}</dd><dd></dd></dl>
+
+                <dl><dt>&nbsp;</dt><dd><input type="submit" class="btnbig" value="提 交"></dd></dl>
+            </form>
+        </div>
+    </div>
+
+
+    </body></html>

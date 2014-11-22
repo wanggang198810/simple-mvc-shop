@@ -1,0 +1,18 @@
+<?php /* Smarty version 2.6.18, created on 2014-04-12 10:21:31
+         compiled from member/member_menu.html */ ?>
+<div class="box">
+    <div class="boxhead">
+        <h3>会员中心</h3>
+    </div>
+    <div class="memberpanel">
+        <ul>
+            <!--某些选项必须是检测会员登录了，才能显示-->
+            <li><a href="index.php?c=member&a=profile_eidt" target="_self">个人资料修改</a></li>
+            <li><a href="index.php?c=member&a=password_eidt" target="_self">密码修改</a></li>
+            <li><a href="index.php?c=member&a=publish" target="_self">发布信息</a></li>
+            <li><a href="index.php?c=member&a=published" target="_self">发布信息管理</a></li>
+            <li><a href="index.php?c=member&a=asks" target="_self">问询管理</a></li>
+            <li><a href="index.php?c=member&a=logout" target="_self">退出登录</a></li>
+        </ul>
+    </div>
+</div>
